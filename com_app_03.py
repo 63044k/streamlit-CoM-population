@@ -68,7 +68,7 @@ def load_population_data(nrows):
     df['total_households'] = df['total_households'].apply(lambda x: float(x))
     thmin = df['total_households'].min()
     thmax = df['total_households'].max()
-    print(thmin, thmax)
+    #print(thmin, thmax)
     df['total_households_norm'] = df['total_households'].apply(lambda x: (x - thmin) / (thmax - thmin))
     df['population'] = df['total_households'] * df['Average Household Size']
     df = df.round({'population': 0})
