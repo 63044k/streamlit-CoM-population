@@ -1,2 +1,2 @@
 # Procfile
-web: sh setup.sh && streamlit run com_app_03.py
+web: streamlit run --server.enableCORS false --server.port $PORT com_app_03.py
